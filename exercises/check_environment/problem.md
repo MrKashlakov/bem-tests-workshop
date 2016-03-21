@@ -1,4 +1,5 @@
 ## Проверка окружения
 
-* Bla bla bla
-* Bla bla
+* npm i
+* bower i
+* node workshop.js verify
