@@ -1,0 +1,12 @@
+{
+	"name": "bem-tests-workshop",
+	"version": "1.0.0",
+	"dependencies": {
+		"bem-components": "2.4.0"
+	},
+	"ignore": [
+		"./bem/cache",
+		"node_modules",
+		"libs"
+	]
+}

@@ -1,7 +1,7 @@
 {
   "name": "bem-tests-workshop",
   "version": "1.0.0",
-  "description": "Workshop for learning bem tests",
+  "description": "Изучаем написание тестов для блоков на БЭМ стеке",
   "main": "workshop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,7 @@
   "author": "Ilya Kashlakov <i.kashlakov@yandex.ru>",
   "license": "MIT",
   "dependencies": {
+    "bower": "^1.7.7",
     "workshopper": "^2.7.0",
     "workshopper-boilerplate": "^1.1.2",
     "workshopper-exercise": "^2.6.1",
