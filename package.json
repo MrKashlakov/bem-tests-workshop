@@ -24,9 +24,11 @@
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.2.0",
     "enb-bem-techs": "^2.2.1",
+    "enb-bem-tmpl-specs": "^1.0.2",
     "enb-bemxjst": "^6.0.0",
     "enb-borschik": "^2.3.1",
     "enb-js": "^1.1.0",
+    "enb-magic-factory": "^0.5.0",
     "enb-stylus": "^2.2.0"
   }
 }

@@ -34,6 +34,8 @@ var techs = {
 module.exports = function(config) {
 	var isProd = process.env.YENV === 'production';
 
+	require('./tmpl-specs.js')(config);
+
 	config.nodes('*.bundles/*', function(nodeConfig) {
 		nodeConfig.addTechs([
 			// essential
