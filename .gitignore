@@ -1,8 +1,10 @@
 .DS_store
 npm-debug.log
+coverage.json
 
 /node_modules/
 /libs/
 /.enb/tmp/
 /desktop.tmpl-specs/
 /desktop.specs/
+/coverage/

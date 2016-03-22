@@ -1,6 +1,11 @@
 module.exports = function (config) {
 	config.includeConfig('enb-bem-tmpl-specs');
-	var tmplSpecs = config.module('enb-bem-tmpl-specs').createConfigurator('tmpl-specs');
+	var tmplSpecs = config.module('enb-bem-tmpl-specs').createConfigurator('tmpl-specs', {
+		coverage: {
+			exclude: ['**/node_modules/**', '**/libs/**'],
+			reporters: ['text', 'json-summary']
+		}
+	});
 
 	tmplSpecs.configure({
 		destPath: 'desktop.tmpl-specs',
