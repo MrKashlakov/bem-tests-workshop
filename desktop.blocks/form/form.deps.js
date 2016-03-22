@@ -1,13 +1,7 @@
-([
+[
+	{ mustDeps: { block: 'i-bem', elems: ['dom'] } },
 	{
-		tech: 'tmpl-spec.js',
-		shouldDeps: [
-			{ tech: 'bemhtml', block: 'form' }
-		]
-	},
-	{
-		mustDeps: [
-			{ block: 'i-bem', elems: ['html'] }
-		]
+		tech: 'spec.js',
+		mustDeps: { tech: 'bemhtml', block: 'form' }
 	}
-])
+]

@@ -5,3 +5,4 @@ npm-debug.log
 /libs/
 /.enb/tmp/
 /desktop.tmpl-specs/
+/desktop.specs/
