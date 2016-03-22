@@ -38,6 +38,7 @@
     "enb-borschik": "^2.3.1",
     "enb-js": "^1.1.0",
     "enb-magic-factory": "^0.5.0",
-    "enb-stylus": "^2.2.0"
+    "enb-stylus": "^2.2.0",
+    "istanbul": "^0.4.2"
   }
 }
