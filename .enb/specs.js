@@ -11,6 +11,10 @@ module.exports = function (config) {
 			'common.blocks',
 			'desktop.blocks'
 		],
-		depsTech : require('enb-bem-techs').depsOld
+		jsSuffixes: ['js', 'vanilla.js'],
+		scripts: [
+			'https://yastatic.net/jquery/1.8.3/jquery.min.js',
+			'https://yastatic.net/lodash/2.4.1/lodash.min.js'
+		],
 	});
 };

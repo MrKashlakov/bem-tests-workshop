@@ -13,7 +13,7 @@ modules.define(
 		provide(BEMDOM.decl({ block: this.name }, /** @lends form.prototype */ {
 			onSetMod: {
 				js: function () {
-					console.log('inited');
+					this.setMod('check', 'yes');
 				}
 			}
 		}));
