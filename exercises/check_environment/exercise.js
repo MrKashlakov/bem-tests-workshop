@@ -19,6 +19,7 @@ exercise.addVerifyProcessor(function (callback) {
 			{
 				enbCommandOption: constants.ENB_JS_SPECS_OPTION,
 				blockPath: path.join(constants.JS_SPECS_FOLDER, BLOCK_NAME),
+				commandOptions: constants.JS_COVERAGE_OPTIONS,
 				errorMessage: 'Среда не готова к тестированию клиентского JavaScript'
 			}
 		]
