@@ -26,8 +26,9 @@ exercise.addVerifyProcessor(function (callback) {
 
 	common.runEnbTestCases(options).then(function () {
 		callback(null, true);
-	}).fail(function (err) {
-		console.log(err);
+	}).fail(function (result) {
+		exercise.emit('fail', result.message)
+		console.log(result.error);
 	});
 });
 

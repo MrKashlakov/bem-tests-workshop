@@ -16,8 +16,10 @@ var runEnbTestCases = function(options) {
 		var defer = Vow.defer();
 		exec(command, function (err, stdOut, stdErr) {
 			if (err) {
-				exercise.emit('fail', errorMessage);
-				defer.reject(err);
+				defer.reject({
+					message: errorMessage,
+					error: err
+				});
 			}
 			defer.resolve(stdOut);
 		});
@@ -25,10 +27,10 @@ var runEnbTestCases = function(options) {
 	};
 	options.testCases.forEach(function (item) {
 		var command = [
-			enb, 
-			constants.ENB_COMMAND, 
-			item.enbCommandOption, 
-			item.blockPath, 
+			enb,
+			constants.ENB_COMMAND,
+			item.enbCommandOption,
+			item.blockPath,
 			constants.ENB_NO_CAHE_ARGUMENT
 		].join(' ');
 		commands.push(executeEnbCommand(command, item.errorMessage));

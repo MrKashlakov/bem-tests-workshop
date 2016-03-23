@@ -27,8 +27,9 @@ exercise.addVerifyProcessor(function (callback) {
 			return;
 		}
 		exercise.emit('fail', 'Обязательные тесты для блока не найдены');
-	}).fail(function (err) {
-		console.log(err);
+	}).fail(function (result) {
+		exercise.emit('fail', result.message)
+		console.log(result.error);
 	});
 });
 
