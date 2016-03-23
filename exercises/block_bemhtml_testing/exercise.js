@@ -19,7 +19,7 @@ exercise.addVerifyProcessor(function (callback) {
 
 	common.runEnbTestCases(options).then(function (stdOut) {
 		var checkers = [
-			/should be equal .*10-form.* by bemhtml/
+			/should be equal .*10-empty.* by bemhtml/
 		];
 		var checkResult = common.checkBemhtmlTestResult(stdOut, checkers);
 		if (checkResult) {
