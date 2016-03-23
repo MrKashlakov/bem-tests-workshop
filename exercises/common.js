@@ -59,7 +59,7 @@ var checkBemhtmlTestResult = function(stdOut, checkers) {
  * @param {Number} options.percent необходимый процент покрытия
  * @param {String} options.baseDir корневая папка приложения
  * @param {String} options.testCasePath относительный путь до тесткейса
- * @return {Boolean}
+ * @return {Promise}
  */
 var checkJsCoverage = function (options) {
 	var defer = Vow.defer();
