@@ -1,5 +1,8 @@
 [
 	"Check environment",
-	"Block BEMHTML testing",
-	"Creating first JS test"
+	"BEMHTML templates test",
+	"Simple JavaScript test",
+	"Sinon spying and stubbing",
+	"Complex AJAX test",
+	"Debug test in browser"
 ]

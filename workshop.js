@@ -9,7 +9,7 @@ var subtitle = '\x1b[23mВыберите задание и нажмите \x1b[3
 workshopper({
 	name: name,
 	title: title,
-	subtitl: subtitle,
+	subtitle: subtitle,
 	exerciseDir: path.join(__dirname, 'exercises'),
 	appDir: __dirname
 });
