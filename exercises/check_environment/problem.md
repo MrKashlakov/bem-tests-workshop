@@ -6,6 +6,6 @@
 
 Выполните все команды в данной последовательности:
 
-```npm install``` - если у вас npm версии выше 3, нужно выполнить ```npm install --legacy-bundling```
-```bower install``` - так как bower поставился локально, лучше запустить ```./node_modules/.bin/bower install```, для пользователей Windows - ```.\node_modules\.bin\bower install```
-```node workshop.js verify``` - для проверки готовности сиситемы к выполнению заданий
+```npm install``` - если у вас npm версии выше 3, нужно выполнить ```npm install --legacy-bundling```  
+```bower install``` - так как bower поставился локально, лучше запустить ```./node_modules/.bin/bower install```, для пользователей Windows - ```.\node_modules\.bin\bower install```  
+```node workshop.js verify``` - для проверки готовности сиситемы к выполнению заданий  
