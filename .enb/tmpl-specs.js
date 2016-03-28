@@ -6,17 +6,14 @@ module.exports = function (config) {
 		destPath: 'desktop.tmpl-specs',
 		levels: ['common.blocks', 'desktop.blocks'],
 		sourceLevels: [
-			{ path: 'libs/bem-components/common.blocks', check: false },
-			{ path: 'common.blocks', check: true },
-			{ path: 'desktop.blocks', check: true }
+			{ path: './libs/bem-components/common.blocks', check: false },
+			'common.blocks',
+			'desktop.blocks'
 		],
 		engines: {
-			'bemhtml': {
+			bemhtml: {
 				tech: 'enb-bemxjst/techs/bemhtml',
-				options: {
-					exportName: 'BEMHTML',
-					devMode: false
-				}
+				options: { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }
 			}
 		}
 	})

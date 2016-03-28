@@ -8,7 +8,7 @@ modules.define('form', ['i-bem__dom'],
 	 * @bem
 	 */
 	function (provide, BEMDOM) {
-		provide(BEMDOM.decl(this.name, /** @lends form.prototype */ {
+		provide(BEMDOM.decl({ block: 'form' }, /** @lends form.prototype */ {
 			onSetMod: {
 				js: function () {
 					this.bindTo('submit', this._onSubmit);

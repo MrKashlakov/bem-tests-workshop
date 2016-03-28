@@ -11,7 +11,8 @@ module.exports = {
 	mods : { theme : 'islands' },
 	content : [
 		{
-			block: 'form'
+			block: 'form',
+			mods: {id: 'spy-and-stub'}
 		}
 	]
 };
