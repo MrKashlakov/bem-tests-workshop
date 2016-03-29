@@ -1,5 +1,11 @@
 block('form').mod('id', 'spy-and-stub')(
 	js()(true),
+	mix()(function () {
+		return {
+			block: 'form',
+			mods: { ajax: true }
+		}
+	}),
 	content()(function () {
 		return [
 			{
@@ -10,4 +16,4 @@ block('form').mod('id', 'spy-and-stub')(
 			this.ctx.content
 		]
 	})
-)
+);
