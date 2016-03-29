@@ -18,7 +18,6 @@ modules.define('form', ['i-bem__dom'],
 					js: function () {
 						this.__base.apply(this, arguments);
 						this._bInput = this.findBlockInside('input');
-						console.log('LOG:');
 					}
 				},
 
