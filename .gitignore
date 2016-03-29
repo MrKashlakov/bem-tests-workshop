@@ -8,3 +8,4 @@ coverage.json
 /desktop.tmpl-specs/
 /desktop.specs/
 /coverage/
+/.idea/

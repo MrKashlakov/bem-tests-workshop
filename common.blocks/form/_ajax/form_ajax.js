@@ -1,13 +1,13 @@
 /**
  * @module form
  */
-modules.define('form', ['i-bem__dom'],
+modules.define('form', ['i-bem__dom', 'jquery'],
 	/**
 	 * @exports
 	 * @class form
 	 * @bem
 	 */
-	function(provide, BEMDOM) {
+	function(provide, BEMDOM, $) {
 		provide(BEMDOM.decl({ block: 'form', modName: 'ajax', modVal: true },
 		/**
 		 * @lends prototype
@@ -22,11 +22,11 @@ modules.define('form', ['i-bem__dom'],
 			_onSubmit: function(e) {
 				var options = {
 					action: this.domElem.attr('action'),
-					method: this.domElem.attr('method')
-					data: this.domElem.serialize();
+					method: this.domElem.attr('method'),
+					data: this.domElem.serialize()
 				};
 				this.sendAjaxRequest(options);
-				rerturn false;
+				return false;
 			},
 
 			/**
@@ -37,7 +37,7 @@ modules.define('form', ['i-bem__dom'],
 			 * @param {Object} [options.data] данные запроса
 			 * @param {String} [options.method = 'POST'] метод запроса (POST/GET), по умолчанию POST
 			 */
-			sendAjaxRequest(options) {
+			sendAjaxRequest: function(options) {
 				var _this = this;
 				var method = options.method || 'POST';
 				options = options || {};
@@ -52,9 +52,9 @@ modules.define('form', ['i-bem__dom'],
 						// Обрабатываем только запросы, которые нужно повторить
 						if (status === 'progress') {
 							_this.emit('xhr-retry');
-							const timeout = response.timeout || 3;
+							var timeout = response.timeout || 3;
 							window.setTimeout(function () {
-								this.sendAjaxRequest({
+								_this.sendAjaxRequest({
 									action: response.url,
 									data: response.retryParams
 								});
@@ -62,7 +62,7 @@ modules.define('form', ['i-bem__dom'],
 						} else {
 							_this.emit('xhr-success', response);
 						}
-					}
+					},
 					error: function () {
 						_this.emit('xhr-fail');
 					} 
