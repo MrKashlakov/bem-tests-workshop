@@ -2,7 +2,8 @@
 	"Check environment",
 	"BEMHTML templates test",
 	"Simple JavaScript test",
-	"Sinon spying and stubbing",
+	"Sinon spying and stubbing PART 1",
+	"Sinon spying and stubbing PART 2",
 	"Complex AJAX test",
 	"Debug test in browser"
 ]

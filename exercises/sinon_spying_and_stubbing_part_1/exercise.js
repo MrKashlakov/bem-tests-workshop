@@ -12,7 +12,7 @@ exercise.addVerifyProcessor(function (callback) {
 		testCases: [
 			{
 				enbCommandOption: constants.ENB_JS_SPECS_OPTION,
-				blockPath: path.join(constants.JS_SPECS_FOLDER, 'simple'),
+				blockPath: path.join(constants.JS_SPECS_FOLDER, 'form'),
 				errorMessage: 'Во время сборки произошла ошибка'
 			}
 		]
@@ -22,7 +22,7 @@ exercise.addVerifyProcessor(function (callback) {
 		var checkOptions = {
 			percent: 100,
 			baseDir: exercise.workshopper.appDir,
-			testCasePath: 'common.blocks/simple/simple.js'
+			testCasePath: 'common.blocks/form/form.js'
 		};
 		common.checkJsCoverage(checkOptions).then(function (result) {
 			console.log(format('Покрыто тестами %d % при минимально возможном покрытии 100 %',
