@@ -28,8 +28,8 @@ exercise.addVerifyProcessor(function (callback) {
 		}
 		exercise.emit('fail', 'Обязательные тесты для блока не найдены');
 	}).fail(function (result) {
-		exercise.emit('fail', result.message)
-		console.log(result.error);
+		exercise.emit('fail', result.message);
+		console.log(result.stdOut);
 	});
 });
 

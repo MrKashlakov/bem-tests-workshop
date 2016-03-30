@@ -14,13 +14,14 @@ var runEnbTestCases = function(options) {
 	process.env['ISTANBUL_COVERAGE'] = 'yes';
 	var enb = path.join(options.baseDir, constants.ENB_BINARY_PATH);
 	var commands = [];
-	var executeEnbCommand = function(command, commandOptions, errorMessage) {
+	var executeEnbCommand = function(command, errorMessage) {
 		var defer = Vow.defer();
 		exec(command, function (err, stdOut, stdErr) {
 			if (err) {
 				defer.reject({
 					message: errorMessage,
-					error: err
+					stdOut: stdOut,
+					stdErr: stdErr
 				});
 			}
 			defer.resolve(stdOut);
@@ -44,7 +45,7 @@ var runEnbTestCases = function(options) {
 /**
  * Проверяет результаты выполнения BEMHTML тестов
  * @param {String} stdOut вывод команды проверки тестов
- * @param {Regex[]} checkers массив проверок
+ * @param {RegExp[]} checkers массив проверок
  * @return {Boolean}
  */
 var checkBemhtmlTestResult = function(stdOut, checkers) {

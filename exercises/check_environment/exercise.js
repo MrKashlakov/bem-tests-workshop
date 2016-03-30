@@ -3,7 +3,7 @@ var path = require('path');
 var common = require('../common');
 var constants = require('../constants');
 
-var BLOCK_NAME = 'environment-checker'
+var BLOCK_NAME = 'environment-checker';
 
 exercise.requireSubmission = false;
 exercise.addVerifyProcessor(function (callback) {
@@ -19,7 +19,6 @@ exercise.addVerifyProcessor(function (callback) {
 			{
 				enbCommandOption: constants.ENB_JS_SPECS_OPTION,
 				blockPath: path.join(constants.JS_SPECS_FOLDER, BLOCK_NAME),
-				commandOptions: constants.JS_COVERAGE_OPTIONS,
 				errorMessage: 'Среда не готова к тестированию клиентского JavaScript'
 			}
 		]
@@ -28,8 +27,8 @@ exercise.addVerifyProcessor(function (callback) {
 	common.runEnbTestCases(options).then(function () {
 		callback(null, true);
 	}).fail(function (result) {
-		exercise.emit('fail', result.message)
-		console.log(result.error);
+		exercise.emit('fail', result.message);
+		console.log(result.stdOut);
 	});
 });
 

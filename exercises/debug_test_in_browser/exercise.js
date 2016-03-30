@@ -12,7 +12,7 @@ exercise.addVerifyProcessor(function (callback) {
 		testCases: [
 			{
 				enbCommandOption: constants.ENB_JS_SPECS_OPTION,
-				blockPath: path.join(constants.JS_SPECS_FOLDER, 'form_ajax'),
+				blockPath: path.join(constants.JS_SPECS_FOLDER, 'form_id_browser-debug'),
 				errorMessage: 'Во время сборки произошла ошибка'
 			}
 		]
@@ -22,7 +22,7 @@ exercise.addVerifyProcessor(function (callback) {
 		var checkOptions = {
 			percent: 100,
 			baseDir: exercise.workshopper.appDir,
-			testCasePath: 'common.blocks/form/_ajax/form_ajax.js'
+			testCasePath: 'desktop.blocks/form/_id/form_id_browser-debug.js'
 		};
 		common.checkJsCoverage(checkOptions).then(function (result) {
 			console.log(format('Покрыто тестами %d % при минимально возможном покрытии 100 %',

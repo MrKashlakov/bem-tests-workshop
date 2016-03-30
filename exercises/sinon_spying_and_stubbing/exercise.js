@@ -20,12 +20,12 @@ exercise.addVerifyProcessor(function (callback) {
 
 	common.runEnbTestCases(options).then(function () {
 		var checkOptions = {
-			percent: 88,
+			percent: 80,
 			baseDir: exercise.workshopper.appDir,
 			testCasePath: 'desktop.blocks/form/_id/form_id_spy-and-stub.js'
 		};
 		common.checkJsCoverage(checkOptions).then(function (result) {
-			console.log(format('Покрыто тестами %d% при минимально возможном покрытии 88%',
+			console.log(format('Покрыто тестами %d % при минимально возможном покрытии 80 %',
 					result.currentPercent));
 			result.passed ? callback(null, true) : exercise.emit('fail', 
 					'Процент покрытия не отвечает требованиям задания');
@@ -35,7 +35,7 @@ exercise.addVerifyProcessor(function (callback) {
 		});
 	}).fail(function (result) {
 		exercise.emit('fail', result.message);
-		console.log(result.error);
+		console.log(result.stdOut);
 	});
 });
 

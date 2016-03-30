@@ -1,6 +1,7 @@
 .DS_store
 npm-debug.log
 coverage.json
+__coverage-*.json
 
 /node_modules/
 /libs/

@@ -25,7 +25,7 @@ exercise.addVerifyProcessor(function (callback) {
 			testCasePath: 'common.blocks/form/form.js'
 		};
 		common.checkJsCoverage(checkOptions).then(function (result) {
-			console.log(format('Покрыто тестами %d% при минимально возможном покрытии 100%',
+			console.log(format('Покрыто тестами %d % при минимально возможном покрытии 100 %',
 					result.currentPercent));
 			result.passed ? callback(null, true) : exercise.emit('fail', 
 					'Процент покрытия не отвечает требованиям задания');
@@ -35,7 +35,7 @@ exercise.addVerifyProcessor(function (callback) {
 		});
 	}).fail(function (result) {
 		exercise.emit('fail', result.message);
-		console.log(result.error);
+		console.log(result.stdOut);
 	});
 });
 
