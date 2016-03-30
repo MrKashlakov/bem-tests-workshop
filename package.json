@@ -4,7 +4,7 @@
   "description": "Изучаем написание тестов для блоков на БЭМ стеке",
   "main": "workshop.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node postinstall.js"
   },
   "keywords": [
     "bem",

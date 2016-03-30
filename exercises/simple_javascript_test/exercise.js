@@ -18,7 +18,7 @@ exercise.addVerifyProcessor(function (callback) {
 		]
 	};
 
-	common.runEnbTestCases(options).then(function (stdOut) {
+	common.runEnbTestCases(options).then(function () {
 		var checkOptions = {
 			percent: 100,
 			baseDir: exercise.workshopper.appDir,
