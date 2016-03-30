@@ -11,7 +11,7 @@ exercise.addVerifyProcessor(function (callback) {
 		testCases: [
 			{
 				enbCommandOption: constants.ENB_TMPL_SPECS_OPTION,
-				blockPath: path.join(constants.TMPL_SPECS_FOLDER, 'form'),
+				blockPath: path.join(constants.TMPL_SPECS_FOLDER),
 				errorMessage: 'Во время сборки произошла ошибка'
 			}
 		]
@@ -19,7 +19,8 @@ exercise.addVerifyProcessor(function (callback) {
 
 	common.runEnbTestCases(options).then(function (stdOut) {
 		var checkers = [
-			/should be equal .*10-empty.* by bemhtml/
+			/should be equal .*10-empty.* by bemhtml/,
+			/should be equal .*50-spy-and-stub.* by bemhtml/
 		];
 		var checkResult = common.checkBemhtmlTestResult(stdOut, checkers);
 		if (checkResult) {
