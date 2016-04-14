@@ -1,0 +1,49 @@
+mixin draw-test(test)
+  if(test.htmlDiff)
+    h2.test__title_type_failed
+      span= "[FAILED] "
+      span= test.title
+    .test__diff
+      - test.htmlDiff.forEach(function(part) {
+          - var cls = 'history__normal';
+          - if(part.added) cls = 'history__expected';
+          - if(part.removed) cls = 'history__actual';
+          span(class=cls)= part.value
+      - });
+  else
+    h2.test__title_type_passed
+      span= "[PASSED] "
+      span= test.title
+
+mixin draw-tests(tests)
+  - tests.forEach(function(test) {
+      .test
+        +draw-test(test)
+  - });
+
+mixin draw-suites(suites)
+  - Object.keys(suites).forEach(function(key) {
+      .suite
+        h1.suite__title= key
+        if(suites[key].failed)
+          .history
+            span.history__expected EXPECTED
+            span.history__actual ACTUAL
+        .tests
+          +draw-tests(suites[key].tests)
+  - });
+
+doctype html
+html(lang="ru")
+  meta(charset="utf-8")
+  head
+    title tmpl-specs tests
+    style
+      include html.css
+  body
+    .status
+      span.status__passed [PASSED #{stats.passes}]
+      span.status__failed [FAILED #{stats.failures}]
+      span.status__skipped [SKIPPED #{stats.skipped}]
+    .suites
+      +draw-suites(data)

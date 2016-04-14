@@ -1,0 +1,21 @@
+{
+  "name": "bem-components",
+  "version": "2.4.0",
+  "description": "BEM Components Library",
+  "bugs": "https://github.com/bem/bem-components/issues",
+  "main": "",
+  "ignore": [
+    ".bem/cache",
+    ".enb/tmp",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-core": "2.8.0"
+  },
+  "devDependencies": {
+    "bem-pr": "~0.10.0"
+  },
+  "license": "MPL-2.0",
+  "private": true
+}
